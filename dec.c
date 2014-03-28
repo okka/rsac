@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <math.h>
-
+//fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 #include <string.h>
 
  int inverse(long long int en,long long int f){
