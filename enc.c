@@ -21,10 +21,15 @@ main(){
 	printf("n = "); scanf("%lli;",&n);
 	printf("e = "); scanf("%lli;",&e);
 
-	FILE * cypher_text=fopen("cyphr.txt","w+");
 
+ 
+
+
+
+
+
+	
 	long long int * ptr = (& puis);
-	long long int * ptrr = (& bit);
 
 	printf("enter ur plain text: (don't use '.' only u'r finished ur text)\n");
 	scanf("%c",&plan[0]);
@@ -44,7 +49,7 @@ main(){
 	}
 
 	printf("\n");
-
+printf("%s\n", plan);
 	k=0;i=0;
 while(plan[k]!='.')	
 	{
@@ -57,13 +62,14 @@ while(plan[k]!='.')
 
 		}
 
+	printf("%lli\n", m);
+
  	base=m;
  	puis=e;
  	res=1;
  	bit=1;
 
 	ptr = (& puis) ;
-	ptrr = (& bit) ;
    
       
       jj=n;
@@ -97,7 +103,7 @@ while(plan[k]!='.')
 	while(cypher[j]!=n+1)
 	{
 		y=cypher[j];
-		//printf("%lli",y);
+		printf("%lli\n", y);
 
 		ptr = (& y) ;
 		i=0;
@@ -110,7 +116,6 @@ while(plan[k]!='.')
       			i++;
 	      		printf("%lli",bit );
 
-      			//fprintf(cypher_text, "%d",bit);
    		}
 
 		j++;
