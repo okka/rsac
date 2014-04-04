@@ -1,10 +1,10 @@
-#include<stdio.h>	
+#include <stdio.h>	
 #include <time.h>
 #include <stdlib.h>
 #include <math.h>
-int isprimer(long long int t){
-long long int a,i,r; 
-int p;
+long int  isprimer(long int  t){
+long int  a,i,r; 
+long int  p;
 
 	a=t;
 	for(i=2;i<=a/2;i++){
@@ -28,15 +28,15 @@ int p;
 }
 
 
-long long int Random (long long int iMin, long long int iMax) 
+long int  Random (long int  iMin, long int  iMax) 
 { 
 return (iMin + (rand () % (iMax-iMin+1))); 
 } 
 
 
-int pgcd(long long int a,long long int b)
+long int  pgcd(long int  a,long int  b)
 {
-	long long int r,p;
+	long int  r,p;
 	r=a%b;
 	while(r!=0){
 		a=b;
@@ -57,7 +57,7 @@ return p;
 
 main(){
 
-long long int n,p,q,e,fi,y;
+long int  n,p,q,e,fi,y;
 
 
 
@@ -71,11 +71,13 @@ long long int n,p,q,e,fi,y;
 	
 	while (isprimer(p)!=1)
  	{
- 		p=Random(10000000,100000000000);
+ 		p=Random(1000000,10000000);
+ 		printf("%li\n", p);
  	}
  	while ((isprimer(q)!=1))
  	{
- 		q=Random(10000000,1000000000000);
+ 		q=Random(1000000,100000000);
+ 		printf("%li\n", q);
  	}
 
 	n=p*q;
@@ -86,7 +88,8 @@ long long int n,p,q,e,fi,y;
 	while (y==0)
  	{
 
- 		e=Random(1000000000000,fi-1);
+ 		e=Random(10000000,fi-1);
+ 		printf("%li\n", e);
  		if(pgcd(fi,e)==1){
  			if(isprimer(e)==1){
  				y=1;
@@ -96,9 +99,9 @@ long long int n,p,q,e,fi,y;
  				
  	}      
       
-	printf("n= %lli \n", n);
-	printf("e= %lli \n", e);
-	printf("fi= %lli \n", fi);
+	printf("n= %li; \n", n);
+	printf("e= %li;\n", e);
+	printf("fi= %li; \n", fi);
 
 
 	srand(time(NULL));
