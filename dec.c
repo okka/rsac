@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -6,7 +5,7 @@
 //fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 #include <string.h>
 
- int inverse(long long int en,long long int f){
+ long long int inverse(long long int en,long long int f){
 	long long int a,b,u,v,q,r,l,k;
 	a=f; b=en;
 	u=0;v=1; q=(a/b); r=(a%b);
@@ -26,7 +25,7 @@ long long int base,m,res,jj,puis,bit;
 
 
 char  lnp[10000];
-char  plan[10000];
+long long int  plan[10000];
 char  cypher[10000];
 char  pln[10000];
 
@@ -40,9 +39,10 @@ char buf[10000];
 
 
 
+
 	d=inverse(e,fi);
 
-
+printf("%lli %lli\n",d,(e*d)%fi );
 
 
 	long long int * ptr = (& puis) ;
@@ -59,7 +59,7 @@ int i=0;
 
 
 
- int aa=strlen(buf);  buf[aa]='.'; aa=strlen(buf);
+ int aa=strlen(buf); 
 j=aa-2;
  i=0;
 while(buf[i]!='.')
@@ -71,7 +71,8 @@ while(buf[i]!='.')
 }
 
 cypher[i]=buf[i];
-
+printf("%s\n", buf);
+printf("%s\n", cypher);
 y=0;
     i=0;
     k=0;
@@ -89,24 +90,25 @@ while(cypher[k]!='.')
 		j++;
 	}
 	k=j;
+	printf("%lli\n", y);
 	plan[i]=y;
 	i++;
 	
 }
 
-
-plan[i]='@';
+plan[i]=n+1;
 	
 
-int o='@';
+long long int o=n+1;
 
 k=0;
+i=0;
 while(plan[k]!=o)	
 		{
 			
 
-m=(long long int)plan[k];
-
+m=plan[k];
+printf("%lli\n", m);
  	base=m;
  	puis=d;
  	res=1;
@@ -137,6 +139,7 @@ m=(long long int)plan[k];
       }
 
 			y= res % jj;
+			printf("%lli\n", y);
 			pln[i]=(char)y;
 			
 			i++;
